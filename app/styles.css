@@ -1,0 +1,137 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Page container */
+.page-container {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Map container */
+.map-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.map {
+  z-index: 0;
+}
+
+/* Loading styles */
+.loading-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 10;
+}
+
+.loading-spinner {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border-top: 2px solid #3b82f6;
+  border-bottom: 2px solid #3b82f6;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message */
+.error-message {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f59e0b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Info panels */
+.info-panel {
+  position: absolute;
+  background-color: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.top-left {
+  top: 16px;
+  left: 16px;
+}
+
+.bottom-right {
+  bottom: 16px;
+  right: 16px;
+}
+
+.info-title {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.mock-data-text {
+  font-size: 12px;
+  color: #ea580c;
+  margin-top: 4px;
+}
+
+/* Button */
+.reconnect-button {
+  margin-top: 8px;
+  font-size: 12px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reconnect-button:hover {
+  background-color: #2563eb;
+}
